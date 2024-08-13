@@ -21,6 +21,12 @@ As part of the second stage of AATOL, an additional 48 samples were sequenced (s
 Bait-capture libraries were prepared using the Angiosperms353 bait kit (NEBNext Ultra II FS DNA Library Prep with MyBaits Angiosperms353 Capture)  
 Sequencing was done on an Illumina NovaSeq 6000 in the 150 bp paired-end read format  
 
+To download this data from the Bioplatforms repository (old method, not for ENA), log in there and generate a bulk download (includes a `download.sh` script and a `tmp/` folder with URLs and md5sums)  
+On Gadi, copy the script and `tmp/` folder to a location where you want to download the files, then run with your api key (from the Bioplatforms site)  
+```s
+qsub -v api_key=______ /path/to/scripts/download_seqs.sh
+```
+
 An additional 83 samples were sequenced outside Australia (sample numbers starting with M), but four had unclear voucher material and were dropped after sequencing (M29, M43, M70, M87) 
 Custom in-house library preparation was done by Arbor Biosciences (Ann Arbor, Michigan, USA) with the A353 bait kit as above   
 Sequencing was done on an Illumina NovaSeq 6000 in the 150 bp paired-end read format  
