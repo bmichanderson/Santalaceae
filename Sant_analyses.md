@@ -57,10 +57,13 @@ For SRA samples with >40 M read pairs, seqtk was used to randomly downsample to 
 ```s
 script="/path/to/scripts/downsample_reads.sh"
 for sample in $(cat samples.txt); do
-echo -e "${script} $(pwd)/${sample}_R1.fastq.gz $(pwd)/${sample}_R2.fastq.gz" >> calls.txt
+echo -e "${script} $(pwd)/${sample}_R1.fastq.gz $(pwd)/${sample}_R2.fastq.gz 20000000" >> calls.txt
 done
 qsub -l ncpus=16,mem=128GB,walltime=04:00:00,storage=gdata/nm31,wd -v calls_file="calls.txt",cores_per="4",timeout="4000" /path/to/scripts/launch_parallel.sh
 ```
+
+Since ENA and SRA reformat read headers (losing the Illumina tiling information), optical duplicates cannot be removed with clumpify, so any downloaded data may have to retain duplicates as well (if seeking to replicate these analyses)  
+Adding an argument "no" after the calls to `illumina_qc.sh` below will turn off optical deduplication   
 
 To automate and parallelise the QC jobs, create a `calls.txt` file for each dataset  
 Naming convention for the raw read sources varied, so filenames were adjusted to ensure they started with sample ID followed by an underscore and ended with `R1.fastq.gz` or `R2.fastq.gz`  
