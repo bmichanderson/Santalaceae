@@ -1015,7 +1015,7 @@ prop    0.2487185    0.1158592    0.1663398    0.4690825    1.000
 This oddly reconstructs holoparasitism as ancestral for non-Olacaceae Santalales, which is not biologically sensible  
 
 Let's run a third time, this time coding holoparasites as root parasites rather than a separate character state  
-Generate a new character table, coding the *Heisteria* sample as 0.5 0.5 for not or root parasitic (unknown, but not aerial)
+Generate a new character table, coding the *Heisteria* sample as 0.5 0.5 for not or root parasitic (unknown, but not aerial)  
 Run the commands specified above, except the prior on the root is now (1, 0, 0), because there are only three states  
 
 ```
