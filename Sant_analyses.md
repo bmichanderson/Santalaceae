@@ -1035,3 +1035,21 @@ prop    0.2492893    0.1670251    0.5836856    1.000
 ```
 
 Plot as before, dropping the second colour (only need 3)  
+
+Finally, we can also re-run with three states to include the holoparasitic condition (not, hemi, holo)  
+Root prior is now (1, 0, 0)  
+```
+1000 trees with a mapped discrete character with states:
+ hemi, holo, not
+
+trees have 3.233 changes between states on average
+
+changes are of the following types:
+     hemi,holo hemi,not holo,hemi holo,not not,hemi not,holo
+x->y     2.166        0         0        0    1.067        0
+
+mean total time spent in each state is:
+             hemi         holo          not    total
+raw  6924.2926910 509.65946080 1488.4421442 8922.394
+prop    0.7760577   0.05712138    0.1668209    1.000
+```
