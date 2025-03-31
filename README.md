@@ -10,3 +10,5 @@ Raw sequencing data are available at the European Nucleotide Archive under proje
 Note that uploading data to ENA removes Illumina information from read headers, so the filtering step to remove optical duplicates needs to be turned off  
 
 The full set of analysis steps can be followed in the `Sant_analyses.md` file, though many steps are specific to the NCI Gadi supercomputer where these analyses were run  
+
+[![DOI](https://zenodo.org/badge/838649521.svg)](https://doi.org/10.5281/zenodo.14729299)
